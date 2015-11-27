@@ -38,6 +38,17 @@ return array(
                     )
                 )
             ),
+        	'default' => array(
+        				'type' => 'Zend\Mvc\Router\Http\Segment',
+        				'options' => array(
+        						'route' => '/:action',
+        						'constraints' => array(),
+        						'defaults' => array(
+        								'controller' => 'MiniModule\Controller\Index',
+        								'action' => 'index'
+        						),
+        				),
+        		),
         )
     ),
 
@@ -46,6 +57,8 @@ return array(
             'error' => __DIR__ . '/../view/error.phtml',
             'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
             'mini-module/index/index' => __DIR__ . '/../view/index/index.phtml',
+            'mini-module/index/form' => __DIR__ . '/../view/index/form.phtml',
+            'mini-module/index/traite' => __DIR__ . '/../view/index/traite.phtml',
 
             'mini-module/bibliotheque/error' => __DIR__ . '/../view/bibliotheque/error.phtml',
             'mini-module/bibliotheque/information' => __DIR__ . '/../view/bibliotheque/information.phtml',
