@@ -33,6 +33,19 @@ class IndexController extends AbstractActionController
                         ),
                     ),
                 ),
+            	array(
+            			'spec' => array(
+            					'type' => 'Zend\Form\Element\Password',
+            					'name' => 'mdp',
+            					'attributes' => array(
+            							'size' => '20',
+            					),
+            					'options' => array(
+            							'label' => 'Mdp : ',
+            					),
+            			),
+            	),
+            		
                 // le boutton de validation
                 array(
                     'spec' => array(
@@ -53,6 +66,7 @@ class IndexController extends AbstractActionController
 
     public function traiteAction()
     {
-        return array( 'login' => $_POST['log'] );
+        return array( 'login' => $_GET['log'], 'mdp'  => $_GET['mdp'] );
+        
     }
 }
