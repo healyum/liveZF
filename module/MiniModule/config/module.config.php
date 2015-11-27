@@ -70,5 +70,14 @@ return array(
             'MiniModule\Controller\Index' => 'MiniModule\Controller\IndexController',
             'MiniModule\Controller\Bibliotheque' => 'MiniModule\Controller\BibliothequeController',
         )
-    )
+    ),
+
+	'service_manager' => array(
+			'factories' => array(
+					'MiniModule\Form\Authentification' => 'MiniModule\Form\AuthentificationFormFactory',
+			),
+			'services' => array (
+					'config_authentification_form' => include __DIR__.'/authentification.form.comfig.php',
+			),
+	),		
 );
